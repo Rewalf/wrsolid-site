@@ -1,49 +1,62 @@
 {
   "nav": {
-    "about": "Nosotros",
-    "services": "Servicios",
-    "techStack": "Tecnología",
-    "contact": "Contacto"
+    "expertise": "Experiencia",
+    "standard": "El Estándar",
+    "dna": "ADN de Ingeniería",
+    "cta": "Empezar"
   },
   "hero": {
-    "tagline": "Construido para Durar.",
-    "headline": "Somos Sólidos",
-    "subheadline": "Consultoría y desarrollo de software de alta gama que combina el rigor de las mejores prácticas de la industria con la vanguardia de la Inteligencia Artificial y el Cloud Computing.",
-    "cta": "Contáctanos"
+    "badge": "Forjando Software de Alta Densidad",
+    "line1": "FORJANDO",
+    "line2": "SISTEMAS.",
+    "line3": "CONSTRUIDO PARA DURAR.",
+    "quote": "Combinamos la densidad y precisión del tungsteno con la inteligencia de la IA para construir arquitecturas que nunca fallan bajo presión.",
+    "cta1": "Iniciar Proyecto",
+    "cta2": "El ADN"
   },
-  "attributes": {
-    "title": "Por qué WRSolid",
-    "item1_title": "Innovación Disruptiva",
-    "item1_desc": "Implementación de tecnologías de última generación para resolver problemas de negocio complejos.",
-    "item2_title": "Competencia de Élite",
-    "item2_desc": "Un equipo de ingenieros senior que dominan los Principios SOLID y patrones de diseño.",
-    "item3_title": "Agilidad Real",
-    "item3_desc": "Respuestas rápidas basadas en arquitecturas Cloud-Native escalables.",
-    "item4_title": "Transparencia Técnica",
-    "item4_desc": "Soluciones robustas, seguras y con código limpio (Clean Code)."
+  "standard": {
+    "title": "EL ESTÁNDAR TUNGSTENO",
+    "subtitle": "Nuestra ejecución se rige por los más altos estándares de densidad en la industria del software.",
+    "card1_title": "Resiliencia",
+    "card1_desc": "Construido para soportar temperaturas extremas de datos. Arquitecturas de alta disponibilidad en Azure con 99.99% de fiabilidad.",
+    "card2_title": "Precisión",
+    "card2_desc": "Ingeniería de nivel quirúrgico. Cada módulo sigue los principios SOLID para máxima mantenibilidad y escala.",
+    "card3_title": "Modernidad",
+    "card3_desc": "Integración de IA de nueva generación. No solo resolvemos problemas; automatizamos flujos de trabajo futuros con patrones neuronales."
   },
-  "services": {
-    "title": "Servicios",
-    "item1_title": "Consultoría de Software",
-    "item1_desc": "Orientación estratégica para alinear tus decisiones tecnológicas con los objetivos del negocio.",
-    "item2_title": "Desarrollo a Medida",
-    "item2_desc": "Desarrollo integral de software escalable, mantenible y de alto rendimiento.",
-    "item3_title": "Arquitectura Cloud",
-    "item3_desc": "Soluciones serverless y microservicios en Azure diseñadas para resiliencia y escala."
+  "dna": {
+    "title": "ADN DE INGENIERÍA",
+    "subtitle": "La transparencia técnica no es una opción, es nuestro núcleo. Nos especializamos en arquitecturas backend robustas y modelos de IA.",
+    "item1_title": "Optimizado para Azure",
+    "item1_desc": "Soluciones cloud-native aprovechando todo el poder del stack de Microsoft para seguridad de nivel empresarial.",
+    "item2_title": "Flujos AI-First",
+    "item2_desc": "Integrando GenAI y modelos predictivos directamente en la lógica de negocio, no como una solución añadida.",
+    "item3_title": "Arquitectura Limpia",
+    "item3_desc": "Adherencia estricta al desacoplamiento, segregación de interfaces y pipelines de pruebas automatizadas."
   },
-  "techStack": {
-    "title": "Stack Tecnológico"
-  },
-  "brandMessage": {
-    "quote": "En WRSolid, no solo escribimos código; forjamos sistemas. Creemos que la solidez de una empresa depende de la arquitectura de sus herramientas. Combinamos la dureza y precisión del tungsteno con la fluidez de la Inteligencia Artificial para entregar soluciones que son, simplemente, sólidas."
+  "solid": {
+    "title": "Nuestra Base: SOLID"
   },
   "contact": {
-    "title": "Construyamos Algo Sólido",
-    "subtitle": "¿Listo para llevar tu software al siguiente nivel?",
-    "cta": "Contáctanos"
+    "headline1": "¿Listo para construir algo",
+    "headline2": "irrompible?",
+    "subtitle": "Hablemos de tu próxima infraestructura Azure o producto impulsado por IA.",
+    "cta": "Contactar un Ingeniero"
   },
   "footer": {
-    "tagline": "Construido para Durar.",
-    "copyright": "© 2025 WRSolid. Todos los derechos reservados."
+    "description": "Consultoría y desarrollo de software de alta gama que combina el rigor de las mejores prácticas de la industria con la Inteligencia Artificial de vanguardia.",
+    "capabilities": "Capacidades",
+    "ai": "Ingeniería de IA",
+    "cloud": "Azure Cloud Native",
+    "enterprise": "Sistemas Empresariales",
+    "strategy": "Estrategia Digital",
+    "corporate": "Corporativo",
+    "theStandard": "El Estándar",
+    "linkedin": "LinkedIn",
+    "legal": "Legal",
+    "contact": "Contacto",
+    "copyright": "© 2026 WRSolid. Construido para Durar.",
+    "badge1": "Azure Partner",
+    "badge2": "ISO 27001 Ready"
   }
 }

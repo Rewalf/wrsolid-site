@@ -107,3 +107,12 @@ body {
   border-color: #00F2FF !important;
   box-shadow: 0 0 24px rgba(0,242,255,0.2);
 }
+
+/* SOLID letters hover */
+.solid-letter {
+  -webkit-text-stroke: 1px rgba(244,244,244,0.2);
+  transition: -webkit-text-stroke 0.3s;
+}
+.solid-letter-item:hover .solid-letter {
+  -webkit-text-stroke: 1px rgba(0,242,255,0.6);
+}

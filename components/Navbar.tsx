@@ -1,38 +1,16 @@
 'use client';
 
 import { useEffect, useState } from 'react';
-import { useTranslations } from 'next-intl';
+import { useTranslations, useLocale } from 'next-intl';
 import { Link, usePathname } from '@/i18n/navigation';
-import { useLocale } from 'next-intl';
 
-function HexLogo() {
+function WRSLogo({ className = 'w-10 h-10' }: { className?: string }) {
   return (
-    <svg width="36" height="42" viewBox="0 0 36 42" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-      <polygon
-        points="18,2 34,11 34,31 18,40 2,31 2,11"
-        stroke="#00F2FF"
-        strokeWidth="1.5"
-        fill="rgba(0,242,255,0.04)"
-      />
-      <polygon
-        points="18,6 30,13 30,29 18,36 6,29 6,13"
-        stroke="#00F2FF"
-        strokeWidth="0.5"
-        strokeOpacity="0.3"
-        fill="none"
-      />
-      <text
-        x="18"
-        y="26"
-        textAnchor="middle"
-        fill="#F4F4F4"
-        fontSize="10"
-        fontWeight="800"
-        fontFamily="Syne, var(--font-syne), sans-serif"
-        letterSpacing="0.5"
-      >
-        WRS
-      </text>
+    <svg viewBox="0 0 100 115" fill="none" xmlns="http://www.w3.org/2000/svg" className={className} aria-hidden="true">
+      <path d="M50 5L95 30V85L50 110L5 85V30L50 5Z" stroke="currentColor" strokeWidth="2" fill="rgba(244,244,244,0.05)" />
+      <path d="M25 40L40 75L50 55L60 75L75 40" stroke="currentColor" strokeWidth="5" strokeLinecap="round" strokeLinejoin="round" />
+      <path d="M25 85H75" stroke="currentColor" strokeWidth="5" strokeLinecap="round" />
+      <path d="M50 15L80 32V68L50 85L20 68V32L50 15Z" stroke="#00F2FF" strokeWidth="0.5" strokeDasharray="2 2" className="animate-pulse" />
     </svg>
   );
 }
@@ -41,110 +19,153 @@ export default function Navbar() {
   const t = useTranslations('nav');
   const locale = useLocale();
   const pathname = usePathname();
-  const [scrolled, setScrolled] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
+  const [mobileOpen, setMobileOpen] = useState(false);
 
   useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 40);
+    const onScroll = () => setIsScrolled(window.scrollY > 50);
     window.addEventListener('scroll', onScroll, { passive: true });
     return () => window.removeEventListener('scroll', onScroll);
   }, []);
 
   const navLinks = [
-    { href: '#about',    label: t('about') },
-    { href: '#services', label: t('services') },
-    { href: '#stack',    label: t('techStack') },
-    { href: '#contact',  label: t('contact') },
+    { href: '#expertise', label: t('expertise') },
+    { href: '#framework', label: t('standard') },
+    { href: '#dna',       label: t('dna') },
   ];
 
-  const otherLocale = locale === 'en' ? 'es' : 'en';
-
   return (
-    <header
-      className="fixed top-0 inset-x-0 z-50 transition-all duration-300"
-      style={{
-        backgroundColor: scrolled ? 'rgba(26,26,27,0.92)' : 'transparent',
-        backdropFilter: scrolled ? 'blur(12px)' : 'none',
-        borderBottom: scrolled ? '1px solid rgba(51,54,57,0.6)' : '1px solid transparent',
-      }}
-    >
-      <nav className="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
-        {/* Logo */}
-        <a
-          href="#hero"
-          className="flex items-center gap-3 group"
-          aria-label="WRSolid home"
-        >
-          <HexLogo />
-          <span
-            style={{
-              fontFamily: 'var(--font-syne), Syne, sans-serif',
-              fontSize: '1.125rem',
+    <>
+      <nav
+        className="fixed top-0 inset-x-0 z-50 transition-all duration-500 px-6 py-4"
+        style={isScrolled ? {
+          backgroundColor: 'rgba(26,26,27,0.95)',
+          backdropFilter: 'blur(12px)',
+          borderBottom: '1px solid rgba(244,244,244,0.08)',
+          paddingTop: '0.75rem',
+          paddingBottom: '0.75rem',
+        } : {
+          backgroundColor: 'transparent',
+          borderBottom: '1px solid transparent',
+        }}
+      >
+        <div className="max-w-7xl mx-auto flex items-center justify-between">
+          {/* Logo */}
+          <a href="#" className="flex items-center gap-3" aria-label="WRSolid home">
+            <WRSLogo className="w-10 h-10" />
+            <span style={{
+              fontSize: '1.25rem',
               fontWeight: 700,
-              letterSpacing: '0.04em',
-              color: '#F4F4F4',
-            }}
-          >
-            WRSolid
-          </span>
-        </a>
+              letterSpacing: '0.2em',
+              fontFamily: 'var(--font-syne), Syne, sans-serif',
+              paddingTop: '2px',
+            }}>
+              WRSOLID
+            </span>
+          </a>
 
-        {/* Nav links — desktop */}
-        <ul className="hidden md:flex items-center gap-8">
-          {navLinks.map((link) => (
-            <li key={link.href}>
-              <a
-                href={link.href}
-                className="text-sm font-medium tracking-wide transition-colors duration-200"
-                style={{
-                  color: 'rgba(244,244,244,0.65)',
-                  fontFamily: 'var(--font-barlow), Barlow, sans-serif',
-                }}
-                onMouseEnter={(e) => (e.currentTarget.style.color = '#00F2FF')}
-                onMouseLeave={(e) => (e.currentTarget.style.color = 'rgba(244,244,244,0.65)')}
-              >
-                {link.label}
-              </a>
-            </li>
-          ))}
-        </ul>
+          {/* Desktop nav */}
+          <div className="hidden md:flex items-center gap-10">
+            <ul className="flex items-center gap-10">
+              {navLinks.map((link) => (
+                <li key={link.href}>
+                  <a
+                    href={link.href}
+                    className="text-sm font-medium tracking-widest uppercase transition-colors duration-200 hover:text-[#00F2FF]"
+                    style={{ color: 'rgba(244,244,244,0.7)', fontFamily: 'var(--font-barlow), Barlow, sans-serif' }}
+                  >
+                    {link.label}
+                  </a>
+                </li>
+              ))}
+            </ul>
 
-        {/* Language switcher */}
-        <div className="flex items-center gap-1">
-          <span
-            className="text-xs font-mono px-2 py-1 rounded"
-            style={{
-              color: locale === 'en' ? '#00F2FF' : 'rgba(244,244,244,0.4)',
-              fontFamily: 'var(--font-mono-custom), monospace',
-              fontWeight: locale === 'en' ? 700 : 400,
-              cursor: locale === 'en' ? 'default' : 'pointer',
-              transition: 'color 0.2s',
-            }}
-          >
-            {locale === 'en' ? (
-              <span>EN</span>
-            ) : (
-              <Link href={pathname} locale="en">EN</Link>
-            )}
-          </span>
-          <span style={{ color: 'rgba(244,244,244,0.2)', fontSize: '0.65rem' }}>|</span>
-          <span
-            className="text-xs font-mono px-2 py-1 rounded"
-            style={{
-              color: locale === 'es' ? '#00F2FF' : 'rgba(244,244,244,0.4)',
-              fontFamily: 'var(--font-mono-custom), monospace',
-              fontWeight: locale === 'es' ? 700 : 400,
-              cursor: locale === 'es' ? 'default' : 'pointer',
-              transition: 'color 0.2s',
-            }}
-          >
-            {locale === 'es' ? (
-              <span>ES</span>
-            ) : (
-              <Link href={pathname} locale="es">ES</Link>
-            )}
-          </span>
+            <a
+              href="#contact"
+              className="text-sm font-bold tracking-widest uppercase px-6 py-2.5 border transition-all duration-300"
+              style={{
+                backgroundColor: '#333639',
+                borderColor: 'rgba(244,244,244,0.2)',
+                color: '#F4F4F4',
+                fontFamily: 'var(--font-barlow), Barlow, sans-serif',
+              }}
+              onMouseEnter={(e) => {
+                (e.currentTarget as HTMLElement).style.backgroundColor = '#F4F4F4';
+                (e.currentTarget as HTMLElement).style.color = '#1A1A1B';
+              }}
+              onMouseLeave={(e) => {
+                (e.currentTarget as HTMLElement).style.backgroundColor = '#333639';
+                (e.currentTarget as HTMLElement).style.color = '#F4F4F4';
+              }}
+            >
+              {t('cta')}
+            </a>
+
+            {/* Language switcher */}
+            <div className="flex items-center gap-1" style={{ fontFamily: 'var(--font-mono-custom), monospace', fontSize: '0.7rem' }}>
+              {locale === 'en' ? (
+                <span style={{ color: '#00F2FF', fontWeight: 700 }}>EN</span>
+              ) : (
+                <Link href={pathname} locale="en" style={{ color: 'rgba(244,244,244,0.4)' }} className="hover:text-[#00F2FF] transition-colors">EN</Link>
+              )}
+              <span style={{ color: 'rgba(244,244,244,0.2)', margin: '0 4px' }}>|</span>
+              {locale === 'es' ? (
+                <span style={{ color: '#00F2FF', fontWeight: 700 }}>ES</span>
+              ) : (
+                <Link href={pathname} locale="es" style={{ color: 'rgba(244,244,244,0.4)' }} className="hover:text-[#00F2FF] transition-colors">ES</Link>
+              )}
+            </div>
+          </div>
+
+          {/* Mobile: lang switcher + hamburger */}
+          <div className="md:hidden flex items-center gap-4">
+            <div className="flex items-center gap-1" style={{ fontFamily: 'var(--font-mono-custom), monospace', fontSize: '0.7rem' }}>
+              {locale === 'en' ? (
+                <span style={{ color: '#00F2FF', fontWeight: 700 }}>EN</span>
+              ) : (
+                <Link href={pathname} locale="en" style={{ color: 'rgba(244,244,244,0.4)' }}>EN</Link>
+              )}
+              <span style={{ color: 'rgba(244,244,244,0.2)', margin: '0 4px' }}>|</span>
+              {locale === 'es' ? (
+                <span style={{ color: '#00F2FF', fontWeight: 700 }}>ES</span>
+              ) : (
+                <Link href={pathname} locale="es" style={{ color: 'rgba(244,244,244,0.4)' }}>ES</Link>
+              )}
+            </div>
+            <button onClick={() => setMobileOpen(true)} aria-label="Open menu">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                <line x1="3" y1="6" x2="21" y2="6" /><line x1="3" y1="12" x2="21" y2="12" /><line x1="3" y1="18" x2="21" y2="18" />
+              </svg>
+            </button>
+          </div>
         </div>
       </nav>
-    </header>
+
+      {/* Mobile overlay */}
+      {mobileOpen && (
+        <div
+          className="fixed inset-0 z-[60] flex flex-col p-8"
+          style={{ backgroundColor: '#1A1A1B' }}
+        >
+          <div className="flex justify-end mb-12">
+            <button onClick={() => setMobileOpen(false)} aria-label="Close menu">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                <line x1="18" y1="6" x2="6" y2="18" /><line x1="6" y1="6" x2="18" y2="18" />
+              </svg>
+            </button>
+          </div>
+          <div className="flex flex-col gap-8" style={{ fontFamily: 'var(--font-syne), Syne, sans-serif', fontSize: '1.5rem', fontWeight: 700, letterSpacing: '0.15em' }}>
+            {navLinks.map((link) => (
+              <a key={link.href} href={link.href} onClick={() => setMobileOpen(false)} className="uppercase hover:text-[#00F2FF] transition-colors">
+                {link.label}
+              </a>
+            ))}
+            <a href="#contact" onClick={() => setMobileOpen(false)} className="uppercase text-[#00F2FF]">
+              {t('cta')}
+            </a>
+          </div>
+        </div>
+      )}
+    </>
   );
 }

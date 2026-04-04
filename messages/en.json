@@ -1,49 +1,62 @@
 {
   "nav": {
-    "about": "About",
-    "services": "Services",
-    "techStack": "Tech Stack",
-    "contact": "Contact"
+    "expertise": "Expertise",
+    "standard": "The Standard",
+    "dna": "Engineering DNA",
+    "cta": "Get Started"
   },
   "hero": {
-    "tagline": "Built to Last.",
-    "headline": "We Are Solid",
-    "subheadline": "Premium software consulting and development that combines the rigor of best industry practices with cutting-edge Artificial Intelligence and Cloud Computing.",
-    "cta": "Get in Touch"
+    "badge": "Forging High-Density Software",
+    "line1": "FORGING",
+    "line2": "SYSTEMS.",
+    "line3": "BUILT TO LAST.",
+    "quote": "We combine the density and precision of tungsten with the intelligence of AI to build architectures that never fail under pressure.",
+    "cta1": "Start Project",
+    "cta2": "The DNA"
   },
-  "attributes": {
-    "title": "Why WRSolid",
-    "item1_title": "Disruptive Innovation",
-    "item1_desc": "Implementation of cutting-edge technologies to solve complex business problems.",
-    "item2_title": "Elite Expertise",
-    "item2_desc": "A team of senior engineers who master the SOLID Principles and design patterns.",
-    "item3_title": "Real Agility",
-    "item3_desc": "Fast responses based on scalable Cloud-Native architectures.",
-    "item4_title": "Technical Transparency",
-    "item4_desc": "Robust, secure solutions with Clean Code."
+  "standard": {
+    "title": "THE TUNGSTEN STANDARD",
+    "subtitle": "Our execution is governed by the highest density standards in the software industry.",
+    "card1_title": "Resilience",
+    "card1_desc": "Built to withstand extreme data temperatures. High-availability architectures on Azure with 99.99% reliability.",
+    "card2_title": "Precision",
+    "card2_desc": "Surgical-level engineering. Every module follows the SOLID principles for maximum maintainability and scale.",
+    "card3_title": "Modernity",
+    "card3_desc": "Next-generation AI integration. We don't just solve problems; we automate future workflows using neural patterns."
   },
-  "services": {
-    "title": "Services",
-    "item1_title": "Software Consulting",
-    "item1_desc": "Strategic guidance to align your technology choices with your business goals.",
-    "item2_title": "Custom Development",
-    "item2_desc": "End-to-end development of scalable, maintainable, and high-performance software.",
-    "item3_title": "Cloud Architecture",
-    "item3_desc": "Serverless and microservices solutions on Azure designed for resilience and scale."
+  "dna": {
+    "title": "ENGINEERING DNA",
+    "subtitle": "Technical transparency is not a choice, it's our core. We specialize in robust backend architectures and AI models.",
+    "item1_title": "Azure Optimized",
+    "item1_desc": "Cloud-native solutions leveraging the full power of the Microsoft stack for enterprise-grade security.",
+    "item2_title": "AI-First Workflows",
+    "item2_desc": "Integrating GenAI and predictive models directly into business logic, not as an afterthought.",
+    "item3_title": "Clean Architecture",
+    "item3_desc": "Strict adherence to decoupling, interface segregation, and automated testing pipelines."
   },
-  "techStack": {
-    "title": "Technology Stack"
-  },
-  "brandMessage": {
-    "quote": "At WRSolid, we don't just write code; we forge systems. We believe that a company's solidity depends on the architecture of its tools. We combine the hardness and precision of tungsten with the fluidity of Artificial Intelligence to deliver solutions that are, simply, solid."
+  "solid": {
+    "title": "Our Foundation: SOLID"
   },
   "contact": {
-    "title": "Let's Build Something Solid",
-    "subtitle": "Ready to take your software to the next level?",
-    "cta": "Contact Us"
+    "headline1": "Ready to build something",
+    "headline2": "unbreakable?",
+    "subtitle": "Let's discuss your next Azure infrastructure or AI-powered product.",
+    "cta": "Contact an Engineer"
   },
   "footer": {
-    "tagline": "Built to Last.",
-    "copyright": "© 2025 WRSolid. All rights reserved."
+    "description": "Premium software consulting and development that combines the rigor of industry best practices with cutting-edge Artificial Intelligence.",
+    "capabilities": "Capabilities",
+    "ai": "AI Engineering",
+    "cloud": "Azure Cloud Native",
+    "enterprise": "Enterprise Systems",
+    "strategy": "Digital Strategy",
+    "corporate": "Corporate",
+    "theStandard": "The Standard",
+    "linkedin": "LinkedIn",
+    "legal": "Legal",
+    "contact": "Contact",
+    "copyright": "© 2026 WRSolid. Built to Last.",
+    "badge1": "Azure Partner",
+    "badge2": "ISO 27001 Ready"
   }
 }

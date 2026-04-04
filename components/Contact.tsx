@@ -1,5 +1,6 @@
 'use client';
 
+import { motion } from 'framer-motion';
 import { useTranslations } from 'next-intl';
 
 export default function Contact() {
@@ -8,93 +9,66 @@ export default function Contact() {
   return (
     <section
       id="contact"
-      className="py-24 md:py-36 relative overflow-hidden dot-grid"
-      style={{ backgroundColor: '#0F1011' }}
+      className="py-24 md:py-40 px-6 text-center relative overflow-hidden"
     >
-      {/* Background glow */}
-      <div
-        aria-hidden="true"
-        style={{
-          position: 'absolute',
-          bottom: 0,
-          right: 0,
-          width: 500,
-          height: 500,
-          background: 'radial-gradient(ellipse at bottom right, rgba(0,242,255,0.05) 0%, transparent 70%)',
-          pointerEvents: 'none',
-        }}
-      />
-
-      <div className="relative z-10 max-w-4xl mx-auto px-6 text-center">
-
-        {/* Section number */}
-        <p
-          style={{
-            fontFamily: 'var(--font-mono-custom), monospace',
-            fontSize: '0.7rem',
-            letterSpacing: '0.2em',
-            color: '#00F2FF',
-            textTransform: 'uppercase',
-            marginBottom: '1.5rem',
-          }}
-        >
-          04 — CONTACT
-        </p>
-
-        {/* Heading */}
+      <motion.div
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.8 }}
+        className="max-w-4xl mx-auto relative z-10"
+      >
         <h2
+          className="font-bold mb-8"
           style={{
-            fontFamily: 'var(--font-syne), Syne, sans-serif',
             fontSize: 'clamp(2rem, 5vw, 3.75rem)',
-            fontWeight: 800,
-            letterSpacing: '-0.02em',
+            fontFamily: 'var(--font-syne), Syne, sans-serif',
             color: '#F4F4F4',
             lineHeight: 1.1,
-            marginBottom: '1.25rem',
           }}
         >
-          {t('title')}
+          {t('headline1')}{' '}
+          <br />
+          <span style={{ color: '#00F2FF' }}>{t('headline2')}</span>
         </h2>
 
-        {/* Subtitle */}
         <p
+          className="font-light mb-12"
           style={{
+            color: 'rgba(244,244,244,0.6)',
+            fontSize: 'clamp(1rem, 2vw, 1.25rem)',
             fontFamily: 'var(--font-barlow), Barlow, sans-serif',
-            fontSize: '1.05rem',
-            fontWeight: 300,
-            color: 'rgba(244,244,244,0.55)',
-            marginBottom: '3rem',
           }}
         >
           {t('subtitle')}
         </p>
 
-        {/* CTA link — styled via global CSS */}
         <a
-          href="mailto:contact@wrsolid.com"
-          className="contact-cta"
+          href="mailto:hello@wrsolid.com"
+          className="inline-block font-bold tracking-widest uppercase transition-transform duration-300 hover:scale-105"
           style={{
-            display: 'inline-flex',
-            alignItems: 'center',
-            gap: '0.75rem',
-            padding: '1rem 2.5rem',
+            padding: '1.25rem 3rem',
+            backgroundColor: '#F4F4F4',
+            color: '#1A1A1B',
             fontFamily: 'var(--font-barlow), Barlow, sans-serif',
-            fontSize: '0.8rem',
-            fontWeight: 600,
-            letterSpacing: '0.12em',
-            textTransform: 'uppercase',
-            color: '#00F2FF',
-            border: '1px solid rgba(0,242,255,0.4)',
-            backgroundColor: 'transparent',
-            transition: 'all 0.3s ease',
-            textDecoration: 'none',
+            fontSize: '1.125rem',
           }}
         >
           {t('cta')}
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-            <path d="M4 4L20 4M20 4L20 20M20 4L4 20" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"/>
-          </svg>
         </a>
+      </motion.div>
+
+      {/* Decorative large background text */}
+      <div
+        className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 pointer-events-none select-none whitespace-nowrap font-black"
+        style={{
+          fontSize: '20vw',
+          color: 'rgba(244,244,244,0.02)',
+          fontFamily: 'var(--font-syne), Syne, sans-serif',
+          zIndex: 0,
+        }}
+      >
+        WRSOLID WRSOLID
       </div>
     </section>
   );

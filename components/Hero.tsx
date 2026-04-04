@@ -1,207 +1,148 @@
 'use client';
 
+import { motion } from 'framer-motion';
 import { useTranslations } from 'next-intl';
-
-/* Decorative spinning hexagon rings */
-function HexRings() {
-  return (
-    <div
-      className="absolute inset-0 flex items-center justify-end pointer-events-none overflow-hidden"
-      aria-hidden="true"
-    >
-      {/* Outer ring */}
-      <div
-        className="animate-spin-slow opacity-[0.06]"
-        style={{ width: 680, height: 680, flexShrink: 0, marginRight: -180 }}
-      >
-        <svg viewBox="0 0 200 200" fill="none" width="100%" height="100%">
-          <polygon
-            points="100,4 188,52 188,148 100,196 12,148 12,52"
-            stroke="#00F2FF"
-            strokeWidth="0.6"
-            fill="none"
-          />
-        </svg>
-      </div>
-      {/* Mid ring */}
-      <div
-        className="animate-counter-spin opacity-[0.10] absolute"
-        style={{ width: 460, height: 460, right: -80 }}
-      >
-        <svg viewBox="0 0 200 200" fill="none" width="100%" height="100%">
-          <polygon
-            points="100,8 185,55 185,145 100,192 15,145 15,55"
-            stroke="#00F2FF"
-            strokeWidth="0.8"
-            fill="none"
-          />
-        </svg>
-      </div>
-      {/* Inner ring */}
-      <div
-        className="animate-spin-slow opacity-[0.18] absolute"
-        style={{ width: 280, height: 280, right: 10 }}
-      >
-        <svg viewBox="0 0 200 200" fill="none" width="100%" height="100%">
-          <polygon
-            points="100,10 182,57 182,143 100,190 18,143 18,57"
-            stroke="#00F2FF"
-            strokeWidth="1"
-            fill="rgba(0,242,255,0.03)"
-          />
-          {/* WRS inside */}
-          <text
-            x="100"
-            y="115"
-            textAnchor="middle"
-            fill="rgba(0,242,255,0.3)"
-            fontSize="28"
-            fontWeight="800"
-            fontFamily="Syne, sans-serif"
-            letterSpacing="2"
-          >
-            WRS
-          </text>
-        </svg>
-      </div>
-    </div>
-  );
-}
 
 export default function Hero() {
   const t = useTranslations('hero');
 
   return (
-    <section
-      id="hero"
-      className="relative min-h-screen flex items-center dot-grid"
-      style={{ backgroundColor: '#1A1A1B' }}
-    >
-      {/* Decorative background */}
-      <HexRings />
+    <header className="relative pt-32 pb-20 md:pt-48 md:pb-40 px-6 overflow-hidden">
 
-      {/* Cyan radial glow — top left */}
-      <div
-        className="absolute top-0 left-0 pointer-events-none"
-        aria-hidden="true"
-        style={{
-          width: 600,
-          height: 600,
-          background: 'radial-gradient(ellipse at top left, rgba(0,242,255,0.06) 0%, transparent 70%)',
-        }}
-      />
+      {/* Background: dot grid + radial gradient */}
+      <div className="absolute inset-0 opacity-10 pointer-events-none">
+        <div
+          className="absolute top-0 left-0 w-full h-full"
+          style={{ background: 'radial-gradient(circle at center, #333639 0%, transparent 70%)' }}
+        />
+        <div
+          className="absolute inset-0"
+          style={{ backgroundImage: 'radial-gradient(#F4F4F4 0.5px, transparent 0.5px)', backgroundSize: '40px 40px' }}
+        />
+      </div>
 
-      {/* Content */}
-      <div className="relative z-10 max-w-7xl mx-auto px-6 py-32 md:py-40">
-        <div className="max-w-2xl">
-
-          {/* Tagline badge */}
+      <div className="max-w-7xl mx-auto relative z-10">
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+        >
+          {/* Badge */}
           <div
-            className="animate-fade-in delay-100 inline-flex items-center gap-2 mb-8 px-3 py-1.5 rounded-sm"
+            className="flex items-center gap-2 mb-6 uppercase"
             style={{
-              border: '1px solid rgba(0,242,255,0.3)',
-              backgroundColor: 'rgba(0,242,255,0.05)',
+              color: '#00F2FF',
+              letterSpacing: '0.3em',
+              fontFamily: 'var(--font-barlow), Barlow, sans-serif',
+              fontWeight: 500,
+              fontSize: '0.75rem',
             }}
           >
-            <span
-              style={{
-                width: 6,
-                height: 6,
-                borderRadius: '50%',
-                backgroundColor: '#00F2FF',
-                display: 'inline-block',
-                boxShadow: '0 0 6px #00F2FF',
-              }}
-            />
-            <span
-              style={{
-                fontFamily: 'var(--font-mono-custom), monospace',
-                fontSize: '0.7rem',
-                letterSpacing: '0.2em',
-                color: '#00F2FF',
-                textTransform: 'uppercase',
-              }}
-            >
-              {t('tagline')}
-            </span>
+            {/* Zap icon */}
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" />
+            </svg>
+            <span>{t('badge')}</span>
           </div>
 
-          {/* Main headline */}
+          {/* Headline */}
           <h1
-            className="animate-fade-up delay-200"
+            className="font-bold tracking-tighter mb-8"
             style={{
+              fontSize: 'clamp(3.5rem, 10vw, 9rem)',
+              lineHeight: 0.9,
               fontFamily: 'var(--font-syne), Syne, sans-serif',
-              fontSize: 'clamp(3rem, 8vw, 6rem)',
-              fontWeight: 800,
-              lineHeight: 1.05,
-              letterSpacing: '-0.02em',
-              color: '#F4F4F4',
-              marginBottom: '1.5rem',
             }}
           >
-            {t('headline')}
-          </h1>
-
-          {/* Subheadline */}
-          <p
-            className="animate-fade-up delay-300"
-            style={{
-              fontFamily: 'var(--font-barlow), Barlow, sans-serif',
-              fontSize: '1.1rem',
-              fontWeight: 300,
-              lineHeight: 1.7,
-              color: 'rgba(244,244,244,0.65)',
-              maxWidth: '520px',
-              marginBottom: '2.5rem',
-            }}
-          >
-            {t('subheadline')}
-          </p>
-
-          {/* CTA button */}
-          <div className="animate-fade-up delay-400">
-            <a
-              href="#contact"
-              className="inline-flex items-center gap-3 px-8 py-4 text-sm font-semibold tracking-wider uppercase transition-all duration-300 neon-glow"
+            <span
               style={{
-                fontFamily: 'var(--font-barlow), Barlow, sans-serif',
-                backgroundColor: '#00F2FF',
-                color: '#1A1A1B',
-                letterSpacing: '0.1em',
-                border: '1px solid #00F2FF',
-              }}
-              onMouseEnter={(e) => {
-                e.currentTarget.style.backgroundColor = 'transparent';
-                e.currentTarget.style.color = '#00F2FF';
-              }}
-              onMouseLeave={(e) => {
-                e.currentTarget.style.backgroundColor = '#00F2FF';
-                e.currentTarget.style.color = '#1A1A1B';
+                display: 'block',
+                backgroundImage: 'linear-gradient(to bottom, #F4F4F4, #333639)',
+                WebkitBackgroundClip: 'text',
+                WebkitTextFillColor: 'transparent',
+                backgroundClip: 'text',
               }}
             >
-              {t('cta')}
-              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
-                <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+              {t('line1')}
+            </span>
+            <span
+              style={{
+                display: 'block',
+                backgroundImage: 'linear-gradient(to bottom, #F4F4F4, #333639)',
+                WebkitBackgroundClip: 'text',
+                WebkitTextFillColor: 'transparent',
+                backgroundClip: 'text',
+              }}
+            >
+              {t('line2')}
+            </span>
+            <span style={{ display: 'block', color: '#F4F4F4', WebkitTextFillColor: '#F4F4F4' }}>
+              {t('line3')}
+            </span>
+          </h1>
+
+          {/* Quote */}
+          <p
+            className="max-w-2xl mb-12 leading-relaxed italic font-light"
+            style={{
+              color: 'rgba(244,244,244,0.6)',
+              fontSize: 'clamp(1rem, 2vw, 1.25rem)',
+              fontFamily: 'var(--font-barlow), Barlow, sans-serif',
+            }}
+          >
+            &ldquo;{t('quote')}&rdquo;
+          </p>
+
+          {/* CTAs */}
+          <div className="flex flex-col sm:flex-row gap-6">
+            <a
+              href="#contact"
+              className="relative group overflow-hidden inline-block text-center"
+              style={{
+                padding: '1.25rem 2.5rem',
+                backgroundColor: '#F4F4F4',
+                color: '#1A1A1B',
+                fontFamily: 'var(--font-barlow), Barlow, sans-serif',
+                fontWeight: 700,
+                letterSpacing: '0.15em',
+                textTransform: 'uppercase',
+                fontSize: '0.875rem',
+              }}
+            >
+              <span className="relative z-10">{t('cta1')}</span>
+              <span
+                className="absolute inset-0 -translate-x-full group-hover:translate-x-0 transition-transform duration-300 ease-in-out"
+                style={{ backgroundColor: '#00F2FF' }}
+              />
+            </a>
+            <a
+              href="#dna"
+              className="group inline-flex items-center justify-center gap-3 transition-colors duration-300"
+              style={{
+                padding: '1.25rem 2.5rem',
+                border: '1px solid rgba(244,244,244,0.2)',
+                color: '#F4F4F4',
+                fontFamily: 'var(--font-barlow), Barlow, sans-serif',
+                fontWeight: 700,
+                letterSpacing: '0.15em',
+                textTransform: 'uppercase',
+                fontSize: '0.875rem',
+                backgroundColor: 'transparent',
+              }}
+              onMouseEnter={(e) => (e.currentTarget as HTMLElement).style.backgroundColor = 'rgba(244,244,244,0.05)'}
+              onMouseLeave={(e) => (e.currentTarget as HTMLElement).style.backgroundColor = 'transparent'}
+            >
+              {t('cta2')}
+              <svg
+                width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"
+                className="group-hover:translate-x-2 transition-transform duration-200"
+              >
+                <line x1="5" y1="12" x2="19" y2="12" /><polyline points="12 5 19 12 12 19" />
               </svg>
             </a>
           </div>
-        </div>
-
-        {/* Scroll indicator */}
-        <div
-          className="animate-fade-in delay-800 absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2"
-          aria-hidden="true"
-        >
-          <div
-            style={{
-              width: 1,
-              height: 40,
-              background: 'linear-gradient(to bottom, transparent, rgba(0,242,255,0.5))',
-              animation: 'fade-up 1.5s ease infinite',
-            }}
-          />
-        </div>
+        </motion.div>
       </div>
-    </section>
+    </header>
   );
 }
