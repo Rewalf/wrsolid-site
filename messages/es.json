@@ -1,0 +1,49 @@
+{
+  "nav": {
+    "about": "Nosotros",
+    "services": "Servicios",
+    "techStack": "Tecnología",
+    "contact": "Contacto"
+  },
+  "hero": {
+    "tagline": "Construido para Durar.",
+    "headline": "Somos Sólidos",
+    "subheadline": "Consultoría y desarrollo de software de alta gama que combina el rigor de las mejores prácticas de la industria con la vanguardia de la Inteligencia Artificial y el Cloud Computing.",
+    "cta": "Contáctanos"
+  },
+  "attributes": {
+    "title": "Por qué WRSolid",
+    "item1_title": "Innovación Disruptiva",
+    "item1_desc": "Implementación de tecnologías de última generación para resolver problemas de negocio complejos.",
+    "item2_title": "Competencia de Élite",
+    "item2_desc": "Un equipo de ingenieros senior que dominan los Principios SOLID y patrones de diseño.",
+    "item3_title": "Agilidad Real",
+    "item3_desc": "Respuestas rápidas basadas en arquitecturas Cloud-Native escalables.",
+    "item4_title": "Transparencia Técnica",
+    "item4_desc": "Soluciones robustas, seguras y con código limpio (Clean Code)."
+  },
+  "services": {
+    "title": "Servicios",
+    "item1_title": "Consultoría de Software",
+    "item1_desc": "Orientación estratégica para alinear tus decisiones tecnológicas con los objetivos del negocio.",
+    "item2_title": "Desarrollo a Medida",
+    "item2_desc": "Desarrollo integral de software escalable, mantenible y de alto rendimiento.",
+    "item3_title": "Arquitectura Cloud",
+    "item3_desc": "Soluciones serverless y microservicios en Azure diseñadas para resiliencia y escala."
+  },
+  "techStack": {
+    "title": "Stack Tecnológico"
+  },
+  "brandMessage": {
+    "quote": "En WRSolid, no solo escribimos código; forjamos sistemas. Creemos que la solidez de una empresa depende de la arquitectura de sus herramientas. Combinamos la dureza y precisión del tungsteno con la fluidez de la Inteligencia Artificial para entregar soluciones que son, simplemente, sólidas."
+  },
+  "contact": {
+    "title": "Construyamos Algo Sólido",
+    "subtitle": "¿Listo para llevar tu software al siguiente nivel?",
+    "cta": "Contáctanos"
+  },
+  "footer": {
+    "tagline": "Construido para Durar.",
+    "copyright": "© 2025 WRSolid. Todos los derechos reservados."
+  }
+}

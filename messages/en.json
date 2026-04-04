@@ -1,0 +1,49 @@
+{
+  "nav": {
+    "about": "About",
+    "services": "Services",
+    "techStack": "Tech Stack",
+    "contact": "Contact"
+  },
+  "hero": {
+    "tagline": "Built to Last.",
+    "headline": "We Are Solid",
+    "subheadline": "Premium software consulting and development that combines the rigor of best industry practices with cutting-edge Artificial Intelligence and Cloud Computing.",
+    "cta": "Get in Touch"
+  },
+  "attributes": {
+    "title": "Why WRSolid",
+    "item1_title": "Disruptive Innovation",
+    "item1_desc": "Implementation of cutting-edge technologies to solve complex business problems.",
+    "item2_title": "Elite Expertise",
+    "item2_desc": "A team of senior engineers who master the SOLID Principles and design patterns.",
+    "item3_title": "Real Agility",
+    "item3_desc": "Fast responses based on scalable Cloud-Native architectures.",
+    "item4_title": "Technical Transparency",
+    "item4_desc": "Robust, secure solutions with Clean Code."
+  },
+  "services": {
+    "title": "Services",
+    "item1_title": "Software Consulting",
+    "item1_desc": "Strategic guidance to align your technology choices with your business goals.",
+    "item2_title": "Custom Development",
+    "item2_desc": "End-to-end development of scalable, maintainable, and high-performance software.",
+    "item3_title": "Cloud Architecture",
+    "item3_desc": "Serverless and microservices solutions on Azure designed for resilience and scale."
+  },
+  "techStack": {
+    "title": "Technology Stack"
+  },
+  "brandMessage": {
+    "quote": "At WRSolid, we don't just write code; we forge systems. We believe that a company's solidity depends on the architecture of its tools. We combine the hardness and precision of tungsten with the fluidity of Artificial Intelligence to deliver solutions that are, simply, solid."
+  },
+  "contact": {
+    "title": "Let's Build Something Solid",
+    "subtitle": "Ready to take your software to the next level?",
+    "cta": "Contact Us"
+  },
+  "footer": {
+    "tagline": "Built to Last.",
+    "copyright": "© 2025 WRSolid. All rights reserved."
+  }
+}
