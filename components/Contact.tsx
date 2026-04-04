@@ -1,7 +1,9 @@
-import { getTranslations } from 'next-intl/server';
+'use client';
 
-export default async function Contact() {
-  const t = await getTranslations('contact');
+import { useTranslations } from 'next-intl';
+
+export default function Contact() {
+  const t = useTranslations('contact');
 
   return (
     <section

@@ -1,7 +1,9 @@
-import { getTranslations } from 'next-intl/server';
+'use client';
 
-export default async function BrandMessage() {
-  const t = await getTranslations('brandMessage');
+import { useTranslations } from 'next-intl';
+
+export default function BrandMessage() {
+  const t = useTranslations('brandMessage');
 
   return (
     <section

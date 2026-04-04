@@ -1,4 +1,6 @@
-import { getTranslations } from 'next-intl/server';
+'use client';
+
+import { useTranslations } from 'next-intl';
 
 const stack = [
   { label: 'Next.js',     category: 'Frontend' },
@@ -29,8 +31,8 @@ const categoryColor: Record<string, string> = {
   Engineering: 'rgba(0,242,255,0.05)',
 };
 
-export default async function TechStack() {
-  const t = await getTranslations('techStack');
+export default function TechStack() {
+  const t = useTranslations('techStack');
 
   return (
     <section

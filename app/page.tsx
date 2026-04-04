@@ -1,7 +1,12 @@
-// Root route — middleware redirects to /en or /es based on Accept-Language.
-// This page is never rendered in practice.
-import { redirect } from 'next/navigation';
+'use client';
 
+import { useEffect } from 'react';
+
+// Static export: no server-side redirect available.
+// SWA config also handles / → /en/ at the CDN level.
 export default function RootPage() {
-  redirect('/en');
+  useEffect(() => {
+    window.location.replace('/en/');
+  }, []);
+  return null;
 }

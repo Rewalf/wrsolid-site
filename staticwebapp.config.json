@@ -1,7 +1,14 @@
 {
+  "routes": [
+    {
+      "route": "/",
+      "redirect": "/en/",
+      "statusCode": 302
+    }
+  ],
   "navigationFallback": {
-    "rewrite": "/index.html",
-    "exclude": ["/_next/*", "/api/*", "/*.{png,jpg,gif,ico,svg,webp,woff,woff2,ttf,css,js}"]
+    "rewrite": "/404.html",
+    "exclude": ["/_next/*", "/*.{png,jpg,gif,ico,svg,webp,woff,woff2,ttf,css,js}"]
   },
   "globalHeaders": {
     "X-Content-Type-Options": "nosniff",

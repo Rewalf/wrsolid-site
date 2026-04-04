@@ -4,7 +4,9 @@ import createNextIntlPlugin from 'next-intl/plugin';
 const withNextIntl = createNextIntlPlugin('./i18n/request.ts');
 
 const nextConfig: NextConfig = {
-  /* Full SSR/hybrid mode for Azure Static Web Apps */
+  output: 'export',
+  trailingSlash: true,
+  images: { unoptimized: true },
 };
 
 export default withNextIntl(nextConfig);

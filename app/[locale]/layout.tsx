@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import { Syne, Barlow, JetBrains_Mono } from 'next/font/google';
 import { NextIntlClientProvider } from 'next-intl';
-import { getMessages } from 'next-intl/server';
+import { setRequestLocale } from 'next-intl/server';
 import { notFound } from 'next/navigation';
 import { hasLocale } from 'next-intl';
 import { routing } from '@/i18n/routing';
@@ -38,9 +38,12 @@ export const metadata: Metadata = {
   openGraph: {
     siteName: 'WRSolid',
     type: 'website',
-    images: [{ url: '/og-image.png', width: 1200, height: 630 }],
   },
 };
+
+export function generateStaticParams() {
+  return routing.locales.map((locale) => ({ locale }));
+}
 
 interface Props {
   children: React.ReactNode;
@@ -54,7 +57,11 @@ export default async function LocaleLayout({ children, params }: Props) {
     notFound();
   }
 
-  const messages = await getMessages();
+  // Required for static export — sets locale in cache instead of headers()
+  setRequestLocale(locale);
+
+  // Load messages directly — avoids getMessages() which reads headers()
+  const messages = (await import(`../../messages/${locale}.json`)).default;
 
   return (
     <html
@@ -63,7 +70,7 @@ export default async function LocaleLayout({ children, params }: Props) {
       suppressHydrationWarning
     >
       <body className="min-h-full flex flex-col" style={{ backgroundColor: '#1A1A1B', color: '#F4F4F4', fontFamily: 'var(--font-barlow), Barlow, sans-serif' }}>
-        <NextIntlClientProvider messages={messages}>
+        <NextIntlClientProvider locale={locale} messages={messages}>
           {children}
         </NextIntlClientProvider>
       </body>

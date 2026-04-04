@@ -1,4 +1,6 @@
-import { getTranslations } from 'next-intl/server';
+'use client';
+
+import { useTranslations } from 'next-intl';
 
 function HexLogoSmall() {
   return (
@@ -9,8 +11,8 @@ function HexLogoSmall() {
   );
 }
 
-export default async function Footer() {
-  const t = await getTranslations('footer');
+export default function Footer() {
+  const t = useTranslations('footer');
 
   return (
     <footer
