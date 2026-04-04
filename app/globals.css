@@ -6,11 +6,6 @@
   --color-deepspace:  #1A1A1B;
   --color-neon:       #00F2FF;
   --color-frost:      #F4F4F4;
-
-  /* Typography */
-  --font-sans:    var(--font-barlow),     Barlow,          ui-sans-serif, sans-serif;
-  --font-display: var(--font-syne),       Syne,            ui-sans-serif, sans-serif;
-  --font-mono:    var(--font-mono-custom), 'JetBrains Mono', ui-monospace, monospace;
 }
 
 /* ─── Global resets ──────────────────────────────────────────── */
@@ -19,6 +14,8 @@ html { scroll-behavior: smooth; }
 body {
   background-color: #1A1A1B;
   color: #F4F4F4;
+  /* Use next/font CSS variables — set at runtime via the className on <html> */
+  font-family: var(--font-barlow), Barlow, ui-sans-serif, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }

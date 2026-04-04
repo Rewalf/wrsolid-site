@@ -69,7 +69,7 @@ export default async function LocaleLayout({ children, params }: Props) {
       className={`${syne.variable} ${barlow.variable} ${mono.variable} h-full`}
       suppressHydrationWarning
     >
-      <body className="min-h-full flex flex-col" style={{ backgroundColor: '#1A1A1B', color: '#F4F4F4', fontFamily: 'var(--font-barlow), Barlow, sans-serif' }}>
+      <body className="min-h-full flex flex-col">
         <NextIntlClientProvider locale={locale} messages={messages}>
           {children}
         </NextIntlClientProvider>
