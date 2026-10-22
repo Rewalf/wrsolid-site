@@ -1,0 +1,217 @@
+meta:
+  title: WRSolid — Software built to last
+  description: >-
+    Cloud architecture, custom software and DevOps for companies in Mexico and
+    Latin America. Senior-led projects and technical assessments.
+
+sections:
+  - type: hero
+    id: top
+    eyebrow: Software consulting & engineering
+    title: Software built to last.
+    lead: >-
+      Cloud architecture, custom software and DevOps for companies that need
+      systems they can rely on: designed with care and delivered by senior
+      engineers.
+    actions:
+      - { label: Request an assessment, href: "#contact", style: primary }
+      - { label: Our services, href: "#services", style: secondary }
+    highlights:
+      - Senior-led projects
+      - Azure and AWS
+      - Spanish and English
+
+  - type: services
+    id: services
+    eyebrow: Services
+    title: What we do
+    intro: >-
+      Project delivery and consulting, from the first architecture decision to
+      production.
+    items:
+      - icon: cloud
+        title: Cloud Architecture & Migration
+        text: >-
+          Cloud solutions on Azure and AWS, migration of existing systems, and
+          improvements to cost, security and reliability.
+        points:
+          - Architecture design and reviews
+          - Migration planning and execution
+          - Cost and performance optimization
+        extra:
+          title: Data & integration
+          text: >-
+            ETL pipelines with Microsoft Fabric and Azure Data Factory, tuning
+            of existing ETL processes, and relational and NoSQL databases.
+      - icon: code
+        title: Custom Software Development
+        text: >-
+          Web applications, backend services and APIs built with .NET, Angular,
+          TypeScript and Node.js.
+        points:
+          - Web applications and APIs
+          - Integrations between systems
+          - Incremental modernization of legacy applications
+      - icon: pipeline
+        title: DevOps & CI/CD
+        text: >-
+          Build and release pipelines and automation with Azure DevOps, GitHub
+          and TeamCity.
+        points:
+          - CI/CD pipeline design
+          - Automated, repeatable deployments
+          - Environment setup and release practices
+      - icon: compass
+        title: Consulting
+        text: >-
+          Senior guidance for teams and decision-makers when a technical
+          decision matters.
+        points:
+          - Architecture and code reviews
+          - Performance optimization
+          - Technical roadmaps
+
+  - type: process
+    id: process
+    eyebrow: How we work
+    title: From first call to handover
+    intro: >-
+      A clear process with no surprises: you know the scope, the price and the
+      progress at every step.
+    steps:
+      - title: First call
+        text: >-
+          We listen to the problem, the constraints and the goals, and suggest
+          the right way to start.
+      - title: Assessment
+        text: >-
+          For larger or unclear problems, a Technical Assessment maps the
+          current state and the options before anything is built.
+      - title: Proposal
+        text: A defined scope, timeline and fixed price, in writing.
+      - title: Delivery
+        text: >-
+          Short iterations with visible progress, automated tests and regular
+          demos.
+      - title: Handover
+        text: >-
+          Code, documentation and access belong to you. Your team can run and
+          change the system.
+    note:
+      title: AI-assisted engineering
+      text: >-
+        AI agents support design, development, testing and documentation, so
+        work moves faster. Every change is reviewed by a senior engineer before
+        it ships.
+
+  - type: engagement
+    id: engage
+    eyebrow: Ways to work with us
+    title: Two ways to start
+    options:
+      - name: Technical Assessment
+        duration: Typically 1–2 weeks
+        text: >-
+          A focused review of your architecture, cloud setup, delivery
+          pipelines, data processes or performance.
+        points:
+          - Written report with prioritized recommendations
+          - A clear basis for deciding next steps, with us or with your own team
+          - Fixed price, quoted after a first call
+        cta: { label: Request an assessment, href: "#contact" }
+      - name: Fixed-scope project
+        duration: Scope and timeline agreed up front
+        text: >-
+          Design and delivery of a defined system, feature, migration or
+          pipeline.
+        points:
+          - Regular demos and visible progress
+          - Documentation and handover included
+          - Fixed price, quoted after a first call
+        cta: { label: Discuss a project, href: "#contact" }
+
+  - type: principles
+    id: principles
+    eyebrow: Principles
+    title: How we build
+    intro: Every project follows the same engineering principles.
+    items:
+      - title: Senior, hands-on work
+        text: >-
+          Senior engineers stay involved from design to delivery. The work is
+          never handed off to people who weren't part of the design.
+      - title: Sound architecture
+        text: >-
+          Decisions are documented with their trade-offs. SOLID principles,
+          clean boundaries and automated tests are the default.
+      - title: Pragmatic technology
+        text: >-
+          Azure or AWS, SQL or NoSQL. The choice fits the problem and the team
+          that will maintain it, not the trend.
+      - title: Transparency
+        text: >-
+          Honest estimates, visible progress, and code and documentation that
+          belong to you.
+      - title: Built to hand over
+        text: >-
+          Every project ends with a system your team, or the next developer,
+          can understand and own.
+
+  - type: experience
+    id: experience
+    eyebrow: Experience
+    title: Industries and technology
+    intro: More than 20 years of enterprise software, across industries and platforms.
+    industriesTitle: Industries
+    industries:
+      - Education
+      - Logistics
+      - Healthcare
+      - Media & telecommunications
+      - Manufacturing
+      - Sports
+    stackTitle: Technology
+    stack:
+      - { group: Cloud, items: [Azure, AWS, Microsoft Fabric, Azure Data Factory] }
+      - { group: Backend, items: [.NET, C#, Node.js, REST APIs] }
+      - { group: Frontend, items: [Angular, TypeScript, HTML & CSS] }
+      - { group: Data, items: [SQL Server, Oracle, PostgreSQL, Cosmos DB, DynamoDB, OpenSearch] }
+      - { group: DevOps, items: [Azure DevOps, GitHub Actions, TeamCity, Git] }
+      - { group: AI, items: [AI agents, AI-assisted development] }
+
+  - type: about
+    id: about
+    eyebrow: About
+    title: About WRSolid
+    paragraphs:
+      - >-
+        WRSolid (We Are Solid) is a software consultancy based in Mexico,
+        working with companies across Mexico and Latin America.
+      - >-
+        WRSolid was founded by Flaubert Peralta, a software architect with more
+        than 20 years of experience designing and building enterprise systems
+        in education, logistics, healthcare, media and manufacturing.
+      - >-
+        Every project is led by a senior architect, from the first conversation
+        to the last line of code.
+    credentials:
+      - "Microsoft Certified: Azure Solutions Architect Expert"
+      - 20+ years in enterprise software
+      - Spanish and English
+    links:
+      - { label: Founder's profile, href: "https://www.flaubertpm.com/" }
+      - { label: LinkedIn, href: "https://www.linkedin.com/in/flaubert-peralta/" }
+    quote: >-
+      We build software the way solid structures are built: on clear
+      foundations, with the right materials, and with the years ahead in mind.
+
+  - type: contact
+    id: contact
+    eyebrow: Contact
+    title: Have a system that needs to be solid?
+    intro: >-
+      Tell us about your project or the problem you're facing, and we'll reply
+      to set up a first call.
+    email: hello@wrsolid.com
+    subject: Project enquiry
+    cta: Write to us

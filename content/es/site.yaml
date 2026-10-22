@@ -1,0 +1,28 @@
+email: hello@wrsolid.com
+
+nav:
+  - { label: Servicios, href: "#services" }
+  - { label: Cómo trabajamos, href: "#process" }
+  - { label: Experiencia, href: "#experience" }
+  - { label: Nosotros, href: "#about" }
+
+cta: { label: Solicitar diagnóstico, href: "#contact" }
+
+footer:
+  description: >-
+    Consultoría y desarrollo de software: arquitectura en la nube, software a
+    la medida y DevOps, sobre principios de ingeniería sólidos.
+  columns:
+    - title: Servicios
+      links:
+        - { label: Arquitectura y migración a la nube, href: "#services" }
+        - { label: Desarrollo de software a la medida, href: "#services" }
+        - { label: DevOps y CI/CD, href: "#services" }
+        - { label: Consultoría, href: "#services" }
+    - title: Empresa
+      links:
+        - { label: Cómo trabajamos, href: "#process" }
+        - { label: Formas de trabajo, href: "#engage" }
+        - { label: Nosotros, href: "#about" }
+        - { label: Contacto, href: "#contact" }
+  copyright: "© {year} WRSolid. Hecho para durar."

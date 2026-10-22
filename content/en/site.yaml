@@ -1,0 +1,28 @@
+email: hello@wrsolid.com
+
+nav:
+  - { label: Services, href: "#services" }
+  - { label: How we work, href: "#process" }
+  - { label: Experience, href: "#experience" }
+  - { label: About, href: "#about" }
+
+cta: { label: Request an assessment, href: "#contact" }
+
+footer:
+  description: >-
+    Software consulting and development: cloud architecture, custom software
+    and DevOps, built on sound engineering principles.
+  columns:
+    - title: Services
+      links:
+        - { label: Cloud Architecture & Migration, href: "#services" }
+        - { label: Custom Software Development, href: "#services" }
+        - { label: DevOps & CI/CD, href: "#services" }
+        - { label: Consulting, href: "#services" }
+    - title: Company
+      links:
+        - { label: How we work, href: "#process" }
+        - { label: Ways to work with us, href: "#engage" }
+        - { label: About, href: "#about" }
+        - { label: Contact, href: "#contact" }
+  copyright: "© {year} WRSolid. Built to Last."

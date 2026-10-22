@@ -1,58 +1,8 @@
 {
-  "nav": {
-    "expertise": "Expertise",
-    "standard": "The Standard",
-    "dna": "Engineering DNA",
-    "cta": "Get Started"
-  },
-  "hero": {
-    "badge": "Software Consulting & Engineering",
-    "line1": "SOLID",
-    "line2": "SOFTWARE.",
-    "line3": "BUILT TO LAST.",
-    "quote": "We design, build and modernize business software on sound engineering principles, so it stays reliable and easy to change as your business grows.",
-    "cta1": "Start Project",
-    "cta2": "The DNA"
-  },
-  "standard": {
-    "title": "THE WRSOLID STANDARD",
-    "subtitle": "Every project follows the same engineering principles, from the first design to the final handover.",
-    "card1_title": "Reliability",
-    "card1_desc": "Cloud architectures on Azure and AWS designed for availability, security and predictable costs.",
-    "card2_title": "Precision",
-    "card2_desc": "Every module follows the SOLID principles, with automated tests, so the system stays maintainable as it grows.",
-    "card3_title": "Modern Delivery",
-    "card3_desc": "AI-assisted engineering and automated CI/CD pipelines to deliver faster, with senior review of every change."
-  },
-  "dna": {
-    "title": "ENGINEERING DNA",
-    "subtitle": "Technical transparency is at our core. We specialize in cloud architecture, backend systems and the pipelines that deliver them.",
-    "item1_title": "Cloud Native",
-    "item1_desc": "Solutions on Azure and AWS, from new architectures to migrations of existing systems.",
-    "item2_title": "AI-Assisted Delivery",
-    "item2_desc": "AI agents support design, development, testing and documentation, so projects move faster without cutting corners.",
-    "item3_title": "Clean Architecture",
-    "item3_desc": "Clear boundaries, interface segregation and automated testing pipelines."
-  },
-  "solid": {
-    "title": "Our Foundation: SOLID"
-  },
-  "contact": {
-    "headline1": "Need a system you can",
-    "headline2": "rely on?",
-    "subtitle": "Let's talk about your next cloud project, application or delivery pipeline.",
-    "cta": "Contact Us"
-  },
-  "footer": {
-    "description": "Software consulting and development: cloud architecture, custom software and DevOps, built on sound engineering principles.",
-    "capabilities": "Capabilities",
-    "ai": "AI-Assisted Engineering",
-    "cloud": "Cloud Architecture",
-    "enterprise": "Custom Software",
-    "strategy": "DevOps & CI/CD",
-    "corporate": "Company",
-    "theStandard": "The Standard",
-    "contact": "Contact",
-    "copyright": "© 2026 WRSolid. Built to Last."
+  "ui": {
+    "mainNav": "Main navigation",
+    "language": "Language",
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu"
   }
 }

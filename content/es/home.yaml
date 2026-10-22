@@ -1,0 +1,222 @@
+meta:
+  title: WRSolid — Software hecho para durar
+  description: >-
+    Arquitectura en la nube, software a la medida y DevOps para empresas en
+    México y Latinoamérica. Proyectos con liderazgo senior y diagnósticos
+    técnicos.
+
+sections:
+  - type: hero
+    id: top
+    eyebrow: Consultoría e ingeniería de software
+    title: Software hecho para durar.
+    lead: >-
+      Arquitectura en la nube, software a la medida y DevOps para empresas que
+      necesitan sistemas confiables: diseñados con cuidado y entregados por
+      ingenieros senior.
+    actions:
+      - { label: Solicitar diagnóstico, href: "#contact", style: primary }
+      - { label: Ver servicios, href: "#services", style: secondary }
+    highlights:
+      - Proyectos con liderazgo senior
+      - Azure y AWS
+      - Español e inglés
+
+  - type: services
+    id: services
+    eyebrow: Servicios
+    title: Qué hacemos
+    intro: >-
+      Desarrollo de proyectos y consultoría, desde la primera decisión de
+      arquitectura hasta producción.
+    items:
+      - icon: cloud
+        title: Arquitectura y migración a la nube
+        text: >-
+          Soluciones en Azure y AWS, migración de sistemas existentes y mejoras
+          de costo, seguridad y confiabilidad.
+        points:
+          - Diseño y revisión de arquitectura
+          - Planeación y ejecución de migraciones
+          - Optimización de costos y rendimiento
+        extra:
+          title: Datos e integración
+          text: >-
+            Pipelines ETL con Microsoft Fabric y Azure Data Factory,
+            optimización de procesos ETL existentes, y bases de datos
+            relacionales y NoSQL.
+      - icon: code
+        title: Desarrollo de software a la medida
+        text: >-
+          Aplicaciones web, servicios backend y APIs con .NET, Angular,
+          TypeScript y Node.js.
+        points:
+          - Aplicaciones web y APIs
+          - Integración entre sistemas
+          - Modernización gradual de aplicaciones heredadas
+      - icon: pipeline
+        title: DevOps y CI/CD
+        text: >-
+          Pipelines de compilación y despliegue, y automatización con Azure
+          DevOps, GitHub y TeamCity.
+        points:
+          - Diseño de pipelines de CI/CD
+          - Despliegues automatizados y repetibles
+          - Configuración de ambientes y prácticas de liberación
+      - icon: compass
+        title: Consultoría
+        text: >-
+          Orientación senior para equipos y tomadores de decisiones cuando una
+          decisión técnica es importante.
+        points:
+          - Revisiones de arquitectura y de código
+          - Optimización de rendimiento
+          - Hojas de ruta técnicas
+
+  - type: process
+    id: process
+    eyebrow: Cómo trabajamos
+    title: De la primera llamada a la entrega
+    intro: >-
+      Un proceso claro y sin sorpresas: alcance, precio y avance conocidos en
+      cada etapa.
+    steps:
+      - title: Primera llamada
+        text: >-
+          Se revisan el problema, las restricciones y los objetivos, y se
+          propone la mejor forma de empezar.
+      - title: Diagnóstico
+        text: >-
+          Para problemas grandes o poco definidos, un Diagnóstico técnico
+          describe la situación actual y las opciones antes de construir.
+      - title: Propuesta
+        text: Alcance, calendario y precio fijo definidos por escrito.
+      - title: Desarrollo
+        text: >-
+          Iteraciones cortas con avance visible, pruebas automatizadas y
+          demostraciones periódicas.
+      - title: Entrega
+        text: >-
+          El código, la documentación y los accesos son del cliente. Su equipo
+          puede operar y modificar el sistema.
+    note:
+      title: Ingeniería asistida por IA
+      text: >-
+        Agentes de IA apoyan el diseño, el desarrollo, las pruebas y la
+        documentación para avanzar más rápido. Cada cambio lo revisa un
+        ingeniero senior antes de publicarse.
+
+  - type: engagement
+    id: engage
+    eyebrow: Formas de trabajo
+    title: Dos formas de empezar
+    options:
+      - name: Diagnóstico técnico
+        duration: Normalmente de 1 a 2 semanas
+        text: >-
+          Una revisión enfocada de la arquitectura, la configuración en la
+          nube, los pipelines de entrega, los procesos de datos o el
+          rendimiento.
+        points:
+          - Informe escrito con recomendaciones priorizadas
+          - Una base clara para decidir los siguientes pasos, con nosotros o con su propio equipo
+          - Precio fijo, cotizado después de una primera llamada
+        cta: { label: Solicitar diagnóstico, href: "#contact" }
+      - name: Proyecto de alcance definido
+        duration: Alcance y calendario acordados desde el inicio
+        text: >-
+          Diseño y desarrollo de un sistema, funcionalidad, migración o
+          pipeline definido.
+        points:
+          - Demostraciones periódicas y avance visible
+          - Documentación y entrega incluidas
+          - Precio fijo, cotizado después de una primera llamada
+        cta: { label: Platicar un proyecto, href: "#contact" }
+
+  - type: principles
+    id: principles
+    eyebrow: Principios
+    title: Cómo construimos
+    intro: Todos los proyectos siguen los mismos principios de ingeniería.
+    items:
+      - title: Trabajo senior y directo
+        text: >-
+          Los ingenieros senior participan desde el diseño hasta la entrega. El
+          trabajo nunca pasa a personas que no formaron parte del diseño.
+      - title: Arquitectura sólida
+        text: >-
+          Las decisiones se documentan con sus ventajas y desventajas. Los
+          principios SOLID, los límites claros y las pruebas automatizadas son
+          la norma.
+      - title: Tecnología pragmática
+        text: >-
+          Azure o AWS, SQL o NoSQL. La elección se ajusta al problema y al
+          equipo que lo mantendrá, no a la moda.
+      - title: Transparencia
+        text: >-
+          Estimaciones honestas, avance visible, y código y documentación que
+          pertenecen al cliente.
+      - title: Pensado para entregarse
+        text: >-
+          Cada proyecto termina con un sistema que el equipo del cliente, o el
+          siguiente desarrollador, puede entender y mantener.
+
+  - type: experience
+    id: experience
+    eyebrow: Experiencia
+    title: Industrias y tecnología
+    intro: Más de 20 años de software empresarial en distintas industrias y plataformas.
+    industriesTitle: Industrias
+    industries:
+      - Educación
+      - Logística
+      - Salud
+      - Medios y telecomunicaciones
+      - Manufactura
+      - Deportes
+    stackTitle: Tecnología
+    stack:
+      - { group: Nube, items: [Azure, AWS, Microsoft Fabric, Azure Data Factory] }
+      - { group: Backend, items: [.NET, C#, Node.js, APIs REST] }
+      - { group: Frontend, items: [Angular, TypeScript, HTML y CSS] }
+      - { group: Datos, items: [SQL Server, Oracle, PostgreSQL, Cosmos DB, DynamoDB, OpenSearch] }
+      - { group: DevOps, items: [Azure DevOps, GitHub Actions, TeamCity, Git] }
+      - { group: IA, items: [Agentes de IA, Desarrollo asistido por IA] }
+
+  - type: about
+    id: about
+    eyebrow: Nosotros
+    title: Acerca de WRSolid
+    paragraphs:
+      - >-
+        WRSolid (We Are Solid, "Somos sólidos") es una consultoría de software
+        con sede en México que trabaja con empresas en México y Latinoamérica.
+      - >-
+        WRSolid fue fundada por Flaubert Peralta, arquitecto de software con
+        más de 20 años de experiencia diseñando y construyendo sistemas
+        empresariales en educación, logística, salud, medios y manufactura.
+      - >-
+        Cada proyecto lo dirige un arquitecto senior, desde la primera
+        conversación hasta la última línea de código.
+    credentials:
+      - "Microsoft Certified: Azure Solutions Architect Expert"
+      - Más de 20 años en software empresarial
+      - Español e inglés
+    links:
+      - { label: Perfil del fundador, href: "https://www.flaubertpm.com/" }
+      - { label: LinkedIn, href: "https://www.linkedin.com/in/flaubert-peralta/" }
+    quote: >-
+      Construimos software como se construyen las estructuras sólidas: sobre
+      bases claras, con los materiales adecuados y pensando en los años por
+      venir.
+
+  - type: contact
+    id: contact
+    eyebrow: Contacto
+    title: ¿Tiene un sistema que necesita ser sólido?
+    intro: >-
+      Cuéntenos sobre su proyecto o el problema que enfrenta, y le
+      responderemos para agendar una primera llamada.
+    email: hello@wrsolid.com
+    subject: Consulta de proyecto
+    cta: Escríbanos

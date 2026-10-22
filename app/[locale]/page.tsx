@@ -1,31 +1,44 @@
+import type { Metadata } from 'next';
 import { setRequestLocale } from 'next-intl/server';
 import Navbar from '@/components/Navbar';
-import Hero from '@/components/Hero';
-import Attributes from '@/components/Attributes';
-import Services from '@/components/Services';
-import TechStack from '@/components/TechStack';
-import Contact from '@/components/Contact';
 import Footer from '@/components/Footer';
+import RenderSection from '@/components/sections';
+import { getPage, getSite } from '@/lib/content';
+import { routing } from '@/i18n/routing';
 
 interface Props {
   params: Promise<{ locale: string }>;
+}
+
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const { locale } = await params;
+  const { meta } = await getPage(locale, 'home');
+  return {
+    title: { absolute: meta.title },
+    description: meta.description,
+    alternates: {
+      canonical: `/${locale}/`,
+      languages: Object.fromEntries(routing.locales.map((l) => [l, `/${l}/`])),
+    },
+    openGraph: { title: meta.title, description: meta.description, locale },
+  };
 }
 
 export default async function HomePage({ params }: Props) {
   const { locale } = await params;
   setRequestLocale(locale);
 
+  const [site, page] = await Promise.all([getSite(locale), getPage(locale, 'home')]);
+
   return (
     <>
-      <Navbar />
+      <Navbar nav={site.nav} cta={site.cta} />
       <main>
-        <Hero />
-        <Attributes />
-        <Services />
-        <TechStack />
-        <Contact />
+        {page.sections.map((section, i) => (
+          <RenderSection key={section.id} section={section} index={i} />
+        ))}
       </main>
-      <Footer />
+      <Footer footer={site.footer} email={site.email} />
     </>
   );
 }

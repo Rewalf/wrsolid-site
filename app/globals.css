@@ -1,115 +1,80 @@
 @import "tailwindcss";
 
+/* Brand palette (brand.md §6). */
 @theme {
-  /* Brand color tokens */
-  --color-tungsten:   #333639;
-  --color-deepspace:  #1A1A1B;
-  --color-neon:       #00F2FF;
-  --color-frost:      #F4F4F4;
+  --color-graphite: #1C1F22;
+  --color-slate: #2C3136;
+  --color-stone: #8C939B;
+  --color-chalk: #F3F3F1;
+  --color-navy: #24375A;
+  --color-signal: #2BD46F;
 }
 
-/* ─── Global resets ──────────────────────────────────────────── */
-html { scroll-behavior: smooth; }
+/*
+ * `inline` makes Tailwind emit the var() reference itself instead of resolving
+ * it at build time. next/font sets --font-montserrat / --font-inter on <html>
+ * at runtime, and the tone variables change per section.
+ */
+@theme inline {
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  --font-heading: var(--font-montserrat), ui-sans-serif, system-ui, sans-serif;
+
+  --color-surface: var(--tone-bg);
+  --color-fg: var(--tone-fg);
+  --color-heading: var(--tone-heading);
+  --color-muted: var(--tone-muted);
+  --color-card: var(--tone-card);
+  --color-line: var(--tone-line);
+}
+
+/* Semantic colours for dark and light sections. */
+.tone-dark {
+  --tone-bg: #1C1F22;
+  --tone-fg: #E4E5E3;
+  --tone-heading: #F3F3F1;
+  --tone-muted: #A3A9B0;
+  --tone-card: #2C3136;
+  --tone-line: rgb(243 243 241 / 0.12);
+  background-color: var(--tone-bg);
+  color: var(--tone-fg);
+}
+
+.tone-light {
+  --tone-bg: #F3F3F1;
+  --tone-fg: #2C3136;
+  --tone-heading: #24375A;
+  --tone-muted: #5B6168;
+  --tone-card: #FFFFFF;
+  --tone-line: rgb(28 31 34 / 0.12);
+  background-color: var(--tone-bg);
+  color: var(--tone-fg);
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 5rem;
+}
 
 body {
-  background-color: #1A1A1B;
-  color: #F4F4F4;
-  /* Use next/font CSS variables — set at runtime via the className on <html> */
-  font-family: var(--font-barlow), Barlow, ui-sans-serif, sans-serif;
+  background-color: var(--color-graphite);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* ─── Scrollbar ──────────────────────────────────────────────── */
-::-webkit-scrollbar          { width: 5px; }
-::-webkit-scrollbar-track    { background: #1A1A1B; }
-::-webkit-scrollbar-thumb    { background: #333639; border-radius: 4px; }
-::-webkit-scrollbar-thumb:hover { background: #00F2FF; }
-
-/* ─── Dot-grid hero background ───────────────────────────────── */
-.dot-grid {
-  background-image: radial-gradient(circle, rgba(0, 242, 255, 0.07) 1px, transparent 1px);
-  background-size: 36px 36px;
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { transition-duration: 0.01ms !important; animation-duration: 0.01ms !important; }
 }
 
-/* ─── Keyframe animations ────────────────────────────────────── */
-@keyframes fade-up {
-  from { opacity: 0; transform: translateY(24px); }
-  to   { opacity: 1; transform: translateY(0); }
+:focus-visible {
+  outline: 2px solid var(--color-signal);
+  outline-offset: 3px;
 }
 
-@keyframes fade-in {
-  from { opacity: 0; }
-  to   { opacity: 1; }
-}
-
-@keyframes spin-slow {
-  from { transform: rotate(0deg); }
-  to   { transform: rotate(360deg); }
-}
-
-@keyframes counter-spin {
-  from { transform: rotate(0deg); }
-  to   { transform: rotate(-360deg); }
-}
-
-@keyframes pulse-glow {
-  0%, 100% { opacity: 0.15; }
-  50%       { opacity: 0.35; }
-}
-
-@keyframes scan-line {
-  from { background-position: 0 0; }
-  to   { background-position: 0 100%; }
-}
-
-/* ─── Utility classes ────────────────────────────────────────── */
-.animate-fade-up {
-  animation: fade-up 0.7s ease forwards;
-  opacity: 0;
-}
-.animate-fade-in {
-  animation: fade-in 0.6s ease forwards;
-  opacity: 0;
-}
-.animate-spin-slow    { animation: spin-slow    60s linear infinite; }
-.animate-counter-spin { animation: counter-spin 45s linear infinite; }
-.animate-pulse-glow   { animation: pulse-glow    4s ease-in-out infinite; }
-
-.delay-100  { animation-delay: 100ms; }
-.delay-200  { animation-delay: 200ms; }
-.delay-300  { animation-delay: 300ms; }
-.delay-400  { animation-delay: 400ms; }
-.delay-500  { animation-delay: 500ms; }
-.delay-600  { animation-delay: 600ms; }
-.delay-700  { animation-delay: 700ms; }
-.delay-800  { animation-delay: 800ms; }
-
-/* ─── Neon glow utilities ────────────────────────────────────── */
-.neon-glow     { box-shadow: 0 0 20px rgba(0,242,255,0.25), 0 0 50px rgba(0,242,255,0.10); }
-.neon-text-glow { text-shadow: 0 0 20px rgba(0,242,255,0.50); }
-
-/* ─── Card hover effect ──────────────────────────────────────── */
-.card-hover {
-  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
-}
-.card-hover:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 8px 32px rgba(0,242,255,0.12), 0 2px 8px rgba(0,0,0,0.4);
-  border-color: rgba(0,242,255,0.4) !important;
-}
-
-.contact-cta:hover {
-  background-color: rgba(0,242,255,0.08) !important;
-  border-color: #00F2FF !important;
-  box-shadow: 0 0 24px rgba(0,242,255,0.2);
-}
-
-/* SOLID letters hover */
-.solid-letter {
-  -webkit-text-stroke: 1px rgba(244,244,244,0.2);
-  transition: -webkit-text-stroke 0.3s;
-}
-.solid-letter-item:hover .solid-letter {
-  -webkit-text-stroke: 1px rgba(0,242,255,0.6);
+/* Stand-in slate texture until a real stone photo is added (PLAN.md Phase 4). */
+.stone-texture {
+  background-color: #23272b;
+  background-image:
+    radial-gradient(ellipse at 20% 0%, rgb(255 255 255 / 0.05), transparent 60%),
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='400'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.012 .03' numOctaves='5' seed='7' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 .07 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
 }
