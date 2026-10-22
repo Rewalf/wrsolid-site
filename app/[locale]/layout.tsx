@@ -1,5 +1,5 @@
 import type { Metadata } from 'next';
-import { Montserrat, Inter } from 'next/font/google';
+import localFont from 'next/font/local';
 import { NextIntlClientProvider } from 'next-intl';
 import { setRequestLocale } from 'next-intl/server';
 import { notFound } from 'next/navigation';
@@ -7,15 +7,18 @@ import { hasLocale } from 'next-intl';
 import { routing } from '@/i18n/routing';
 import '../globals.css';
 
-const montserrat = Montserrat({
-  subsets: ['latin'],
+// Self-hosted (Fontsource variable builds, latin subset) so the build never
+// depends on fetching from Google Fonts, which fails on the Azure SWA builder.
+const montserrat = localFont({
+  src: '../fonts/montserrat-latin-wght.woff2',
+  weight: '100 900',
   display: 'swap',
   variable: '--font-montserrat',
-  weight: ['500', '600', '700', '800'],
 });
 
-const inter = Inter({
-  subsets: ['latin'],
+const inter = localFont({
+  src: '../fonts/inter-latin-wght.woff2',
+  weight: '100 900',
   display: 'swap',
   variable: '--font-inter',
 });
