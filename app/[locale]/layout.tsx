@@ -5,6 +5,7 @@ import { setRequestLocale } from 'next-intl/server';
 import { notFound } from 'next/navigation';
 import { hasLocale } from 'next-intl';
 import { routing } from '@/i18n/routing';
+import { sharedOpenGraph } from '@/lib/metadata';
 import '../globals.css';
 
 // Self-hosted (Fontsource variable builds, latin subset) so the build never
@@ -29,11 +30,7 @@ export const metadata: Metadata = {
     template: '%s | WRSolid',
   },
   metadataBase: new URL('https://www.wrsolid.com'),
-  openGraph: {
-    siteName: 'WRSolid',
-    type: 'website',
-    images: [{ url: '/og-image.png', width: 1200, height: 630, alt: 'WRSolid — Built to Last' }],
-  },
+  openGraph: sharedOpenGraph,
   twitter: {
     card: 'summary_large_image',
     images: ['/og-image.png'],

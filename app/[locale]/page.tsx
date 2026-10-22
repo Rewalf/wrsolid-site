@@ -5,6 +5,7 @@ import Footer from '@/components/Footer';
 import RenderSection from '@/components/sections';
 import { getPage, getSite } from '@/lib/content';
 import { routing } from '@/i18n/routing';
+import { sharedOpenGraph } from '@/lib/metadata';
 
 interface Props {
   params: Promise<{ locale: string }>;
@@ -20,7 +21,13 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       canonical: `/${locale}/`,
       languages: Object.fromEntries(routing.locales.map((l) => [l, `/${l}/`])),
     },
-    openGraph: { title: meta.title, description: meta.description, locale },
+    openGraph: {
+      ...sharedOpenGraph,
+      title: meta.title,
+      description: meta.description,
+      locale,
+      url: `/${locale}/`,
+    },
   };
 }
 
