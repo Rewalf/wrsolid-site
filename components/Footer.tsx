@@ -25,8 +25,6 @@ export default function Footer() {
 
   const corporate = [
     { key: 'theStandard', label: t('theStandard'), href: '#framework' },
-    { key: 'linkedin', label: t('linkedin'), href: 'https://linkedin.com/company/wrsolid' },
-    { key: 'legal', label: t('legal'), href: '#' },
     { key: 'contact', label: t('contact'), href: '#contact' },
   ];
 
@@ -81,13 +79,12 @@ export default function Footer() {
             <ul className="space-y-4">
               {capabilities.map(({ key, label }) => (
                 <li key={key}>
-                  <a
-                    href="#"
-                    className="font-light text-sm transition-colors duration-200 hover:text-[#00F2FF]"
+                  <span
+                    className="font-light text-sm"
                     style={{ color: 'rgba(244,244,244,0.6)', fontFamily: 'var(--font-barlow), Barlow, sans-serif' }}
                   >
                     {label}
-                  </a>
+                  </span>
                 </li>
               ))}
             </ul>
@@ -136,17 +133,6 @@ export default function Footer() {
           >
             {t('copyright')}
           </span>
-          <div
-            className="flex gap-8 uppercase tracking-[0.2em]"
-            style={{
-              fontSize: '0.625rem',
-              color: 'rgba(244,244,244,0.2)',
-              fontFamily: 'var(--font-barlow), Barlow, sans-serif',
-            }}
-          >
-            <span>{t('badge1')}</span>
-            <span>{t('badge2')}</span>
-          </div>
         </div>
 
       </div>

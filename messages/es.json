@@ -6,57 +6,53 @@
     "cta": "Empezar"
   },
   "hero": {
-    "badge": "Forjando Software de Alta Densidad",
-    "line1": "FORJANDO",
-    "line2": "SISTEMAS.",
-    "line3": "CONSTRUIDO PARA DURAR.",
-    "quote": "Combinamos la densidad y precisión del tungsteno con la inteligencia de la IA para construir arquitecturas que nunca fallan bajo presión.",
+    "badge": "Consultoría e Ingeniería de Software",
+    "line1": "SOFTWARE",
+    "line2": "SÓLIDO.",
+    "line3": "HECHO PARA DURAR.",
+    "quote": "Diseño, desarrollo y modernización de software empresarial sobre principios de ingeniería sólidos, para que siga siendo confiable y fácil de cambiar conforme el negocio crece.",
     "cta1": "Iniciar Proyecto",
     "cta2": "El ADN"
   },
   "standard": {
-    "title": "EL ESTÁNDAR TUNGSTENO",
-    "subtitle": "Nuestra ejecución se rige por los más altos estándares de densidad en la industria del software.",
-    "card1_title": "Resiliencia",
-    "card1_desc": "Construido para soportar temperaturas extremas de datos. Arquitecturas de alta disponibilidad en Azure con 99.99% de fiabilidad.",
+    "title": "EL ESTÁNDAR WRSOLID",
+    "subtitle": "Cada proyecto sigue los mismos principios de ingeniería, desde el primer diseño hasta la entrega final.",
+    "card1_title": "Confiabilidad",
+    "card1_desc": "Arquitecturas en la nube con Azure y AWS, diseñadas para disponibilidad, seguridad y costos predecibles.",
     "card2_title": "Precisión",
-    "card2_desc": "Ingeniería de nivel quirúrgico. Cada módulo sigue los principios SOLID para máxima mantenibilidad y escala.",
-    "card3_title": "Modernidad",
-    "card3_desc": "Integración de IA de nueva generación. No solo resolvemos problemas; automatizamos flujos de trabajo futuros con patrones neuronales."
+    "card2_desc": "Cada módulo sigue los principios SOLID, con pruebas automatizadas, para que el sistema siga siendo mantenible al crecer.",
+    "card3_title": "Entrega Moderna",
+    "card3_desc": "Ingeniería asistida por IA y pipelines de CI/CD automatizados para entregar más rápido, con revisión senior de cada cambio."
   },
   "dna": {
     "title": "ADN DE INGENIERÍA",
-    "subtitle": "La transparencia técnica no es una opción, es nuestro núcleo. Nos especializamos en arquitecturas backend robustas y modelos de IA.",
-    "item1_title": "Optimizado para Azure",
-    "item1_desc": "Soluciones cloud-native aprovechando todo el poder del stack de Microsoft para seguridad de nivel empresarial.",
-    "item2_title": "Flujos AI-First",
-    "item2_desc": "Integrando GenAI y modelos predictivos directamente en la lógica de negocio, no como una solución añadida.",
+    "subtitle": "La transparencia técnica es nuestro núcleo. Nos especializamos en arquitectura en la nube, sistemas backend y los pipelines que los entregan.",
+    "item1_title": "Nativo en la Nube",
+    "item1_desc": "Soluciones en Azure y AWS, desde arquitecturas nuevas hasta la migración de sistemas existentes.",
+    "item2_title": "Entrega Asistida por IA",
+    "item2_desc": "Agentes de IA apoyan el diseño, desarrollo, pruebas y documentación, para avanzar más rápido sin sacrificar calidad.",
     "item3_title": "Arquitectura Limpia",
-    "item3_desc": "Adherencia estricta al desacoplamiento, segregación de interfaces y pipelines de pruebas automatizadas."
+    "item3_desc": "Límites claros entre componentes, segregación de interfaces y pipelines de pruebas automatizadas."
   },
   "solid": {
     "title": "Nuestra Base: SOLID"
   },
   "contact": {
-    "headline1": "¿Listo para construir algo",
-    "headline2": "irrompible?",
-    "subtitle": "Hablemos de tu próxima infraestructura Azure o producto impulsado por IA.",
-    "cta": "Contactar un Ingeniero"
+    "headline1": "¿Necesita un sistema",
+    "headline2": "confiable?",
+    "subtitle": "Conversemos sobre su próximo proyecto en la nube, aplicación o pipeline de entrega.",
+    "cta": "Contáctenos"
   },
   "footer": {
-    "description": "Consultoría y desarrollo de software de alta gama que combina el rigor de las mejores prácticas de la industria con la Inteligencia Artificial de vanguardia.",
+    "description": "Consultoría y desarrollo de software: arquitectura en la nube, software a la medida y DevOps, sobre principios de ingeniería sólidos.",
     "capabilities": "Capacidades",
-    "ai": "Ingeniería de IA",
-    "cloud": "Azure Cloud Native",
-    "enterprise": "Sistemas Empresariales",
-    "strategy": "Estrategia Digital",
-    "corporate": "Corporativo",
+    "ai": "Ingeniería Asistida por IA",
+    "cloud": "Arquitectura en la Nube",
+    "enterprise": "Software a la Medida",
+    "strategy": "DevOps y CI/CD",
+    "corporate": "Empresa",
     "theStandard": "El Estándar",
-    "linkedin": "LinkedIn",
-    "legal": "Legal",
     "contact": "Contacto",
-    "copyright": "© 2026 WRSolid. Construido para Durar.",
-    "badge1": "Azure Partner",
-    "badge2": "ISO 27001 Ready"
+    "copyright": "© 2026 WRSolid. Hecho para durar."
   }
 }

@@ -15,6 +15,7 @@ export default function Services() {
 
   return (
     <section
+      id="framework"
       className="py-24 md:py-32 px-6"
       style={{ borderTop: '1px solid rgba(244,244,244,0.05)', borderBottom: '1px solid rgba(244,244,244,0.05)' }}
     >

@@ -4,15 +4,15 @@ import { motion } from 'framer-motion';
 import { useTranslations } from 'next-intl';
 
 const codeLines: Array<{ text: string; cyan?: boolean; comment?: boolean }> = [
-  { text: 'namespace WRSolid.Core.Intelligence {', cyan: true },
-  { text: '  public class TungstenArchitect : ISolidEngine', cyan: true },
+  { text: 'namespace WRSolid.Delivery {', cyan: true },
+  { text: '  public class ProjectDelivery : IDeliveryPipeline', cyan: true },
   { text: '  {' },
-  { text: '    // Ensuring 99.9% resilience', comment: true },
-  { text: '    public async Task ExecuteAsync()', cyan: true },
+  { text: '    // Tested, reviewed, deployed', comment: true },
+  { text: '    public async Task ShipAsync()', cyan: true },
   { text: '    {' },
-  { text: '      var model = await _azure.LoadAI();', cyan: true },
+  { text: '      var build = await _pipeline.BuildAsync();', cyan: true },
   { text: '      // Built to last. No shortcuts.', comment: true },
-  { text: '      return ProcessWithPrecision(model);', cyan: true },
+  { text: '      await _pipeline.DeployAsync(build);', cyan: true },
   { text: '    }' },
   { text: '  }' },
   { text: '}' },

@@ -6,7 +6,16 @@
       "Bash(mkdir -p wrsolid-site-tmp)",
       "Bash(mv wrsolid-site/brand.md wrsolid-site-tmp/)",
       "Bash(mv wrsolid-site/brand-es.md wrsolid-site-tmp/)",
-      "Bash(npx create-next-app@latest wrsolid-site --typescript --tailwind --app --no-src-dir --import-alias \"@/*\" --yes)"
+      "Bash(npx create-next-app@latest wrsolid-site --typescript --tailwind --app --no-src-dir --import-alias \"@/*\" --yes)",
+      "Bash(mv \"C:\\\\src\\\\gb-mine\\\\wrsolid-site-tmp\\\\brand.md\" \"C:\\\\src\\\\gb-mine\\\\wrsolid-site/\")",
+      "Bash(mv \"C:\\\\src\\\\gb-mine\\\\wrsolid-site-tmp\\\\brand-es.md\" \"C:\\\\src\\\\gb-mine\\\\wrsolid-site/\")",
+      "Bash(rmdir \"C:\\\\src\\\\gb-mine\\\\wrsolid-site-tmp\")",
+      "Bash(npm install:*)",
+      "Bash(node -e \"const p=require\\(''./package.json''\\); console.log\\(JSON.stringify\\({next:p.dependencies.next, tailwindcss:p.devDependencies.tailwindcss, ''next-intl'':p.dependencies[''next-intl'']}, null, 2\\)\\)\")",
+      "Bash(npm run:*)",
+      "Bash(az group:*)",
+      "Bash(gh run:*)",
+      "Bash(grep -r \"setRequestLocale\\\\|staticGenerationAsyncStorage\\\\|unstable_setRequestLocale\" C:/src/gb-mine/wrsolid-site/node_modules/next-intl/dist --include=*.js -l)"
     ]
   }
 }
